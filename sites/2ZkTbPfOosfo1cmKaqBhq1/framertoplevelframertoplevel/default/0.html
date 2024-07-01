@@ -1,0 +1,99 @@
+import * as React from "react" import * as ReactDOM from "react-dom/client"
+import * as Framer from "framer" window.__framer_importFromPackage =
+(packageAndFilename, exportIdentifier) => () => { return
+React.createElement(Framer.ErrorPlaceholder, { error: 'Package component not
+supported: "' + exportIdentifier + '" in "' + packageAndFilename + '"' }) } // A
+lot of libraries assume process.env.NODE_ENV is present in runtime/buildtime, so
+we are polyfilling it window.process = { ...window.process, env: {
+...(window.process ? window.process.env: undefined), NODE_ENV: "production" } }
+// Fallback support for stack gaps Framer.installFlexboxGapWorkaroundIfNeeded()
+window.__framer_events = window.__framer_events || [] function track() {
+window.__framer_events.push(arguments) } function callWhenDOMReady(callback) {
+if (document.readyState === "interactive" || document.readyState === "complete")
+{ callback() } else { // Note that we’re listening to readystatechange instead
+of DOMContentLoaded because the latter // doesn’t accurately reflect when the
+DOM is ready. Specifically, it’s delayed by scripts with // a defer attribute.
+document.addEventListener("readystatechange", () => { if (document.readyState
+=== "interactive") callback() }) } } callWhenDOMReady(async function() { try {
+const routes = {yd7nMFDHh: {elements: {ffQKfJ0Kx: "hero-heading-2", jGFDk87Dh:
+"hero-heading", MERXQpASN: "hero-heading-1", om1250aoL: "about-1", UaACQKPhS:
+"about", Usy9pnRtq: "hero-heading-3"}, page: Framer.lazy(() =>
+import("./modules/vLY2tAaTO5dgew96Cl2e/tdNkUvWWg2vNQZWPkPz7/yd7nMFDHh.js")),
+path: "/"}, NWoNbHFlK: {elements: {ap4b1GE_c: "about", D0_zL0l65: "step-1",
+Ij5oQQjaA: "2", LFaeHhwLq: "team", nRZ5qskaV: "4", RL5tQoCIA: "step", W6RFvsPcN:
+"hero-heading", WDnW_ExLi: "3", ZzbML8NQ4: "1"}, page: Framer.lazy(() =>
+import("./modules/fdp1IA3x8yTa7RGWm02q/GNQNQV0EP1GB7e9fwvVI/NWoNbHFlK.js")),
+path: "/about"}, BadAnFeJz: {elements: {AI1LOyYRe: "about-1", CTx1rPOx8:
+"about", EIttEZ8Wu: "3", fspULBE8L: "about-2", II7NpDi0_: "1", Iuy0npwiX: "4",
+JRM00aohq: "step", o1IpE0As9: "2"}, page: Framer.lazy(() =>
+import("./modules/t78KyWk36tnNETbz414P/1qvpeQW9qcsbYPK9QEnV/BadAnFeJz.js")),
+path: "/ecommerce"}, TYlK941Z4: {elements: {bFccZO6B6: "about-1", EyqoryjLT:
+"about-2", K4hG_ps5a: "4", m1mame799: "1", NXoqkOs32: "2", O2TrK8Uaj: "step",
+SvGWZKXAN: "about", uwmkgqWpy: "3"}, page: Framer.lazy(() =>
+import("./modules/Ugk3xqWwcdkppU5dU8jj/HQwjkYRKVhHJEpnb0ISK/TYlK941Z4.js")),
+path: "/marketing"}, wMBI5eR7Q: {elements: {bPSrz3GAc: "step", Ha_wtRy3v:
+"about", J0IsR2faN: "2", kr0_k_Nc8: "3", VA6aa9VWJ: "about-2", vNREe4yGS: "4",
+z04ChlgKa: "1", ZZzEaYhxD: "about-1"}, page: Framer.lazy(() =>
+import("./modules/u0Fnqv4yLsON3f80l2Sk/JBprhVBMnoYu97YZ6Qqr/wMBI5eR7Q.js")),
+path: "/branding"}, I048UAEvC: {elements: {IcvsHSZ17: "about-1", k6_yZtzLV:
+"hero-heading", qa5H3zHCR: "about"}, page: Framer.lazy(() =>
+import("./modules/gh1tIsuzJk0PvZbeeU3X/yxyYIrEOY0NRATqHVXbD/I048UAEvC.js")),
+path: "/services"}, f9gKbvqbM: {elements: {p_0EscbQb: "hero-heading"}, page:
+Framer.lazy(() =>
+import("./modules/2MBQnaskPulTQMxIjRI4/i85nedGQlwAfQZslK98A/f9gKbvqbM.js")),
+path: "/review"}, zVFenjhZ4: {elements: {M_PvtITaV: "hero-heading"}, page:
+Framer.lazy(() =>
+import("./modules/9WXZQivdKcZifKycXjhi/YxtJC2KDij0oBJ9iY6jO/zVFenjhZ4.js")),
+path: "/portfolio"}, A5wLTn1r_: {elements: {fbgaSOdSm: "hero-heading",
+V90GvhJlh: "hero-heading-1"}, page: Framer.lazy(() =>
+import("./modules/9KtrTXloO40sTTBX13jZ/j7UpaR6XxjqAYTfeO2Oy/A5wLTn1r_.js")),
+path: "/404"}} const collectionUtils = {} const locales = [{code: "en", id:
+"default", name: "English", slug: ""}] const notFoundPage = Framer.lazy(() =>
+import("./modules/9KtrTXloO40sTTBX13jZ/j7UpaR6XxjqAYTfeO2Oy/A5wLTn1r_.js"))
+const container = document.getElementById("main") let routeId, localeId,
+pathVariables, breakpoints, shouldHydrate = false if ("framerHydrateV2" in
+container.dataset) { const routeData =
+JSON.parse(container.dataset.framerHydrateV2) routeId = routeData.routeId
+localeId = routeData.localeId pathVariables = routeData.pathVariables
+breakpoints = routeData.breakpoints shouldHydrate = true } else { const
+routeData = Framer.inferInitialRouteFromPath(routes,
+decodeURIComponent(location.pathname), true, locales) routeId =
+routeData.routeId localeId = routeData.localeId pathVariables =
+routeData.pathVariables } const route = routes[routeId] const RootComponent =
+await route.page.preload() routes[routeId].page = RootComponent const
+improveInpDuringHydration = true const content = React.createElement(
+Framer.PageRoot, { RootComponent, isWebsite: true, routeId, pathVariables,
+routes, collectionUtils, framerSiteId:
+"048da06cfc974b149feb5d1f207bee548709706781dcbe80b2f5aaac66169209",
+notFoundPage, isReducedMotion: undefined, localeId, locales,
+preserveQueryParams: undefined, enableImproveInpDuringHydration:
+improveInpDuringHydration, addHydrationMarkers: shouldHydrate, } ) const
+contentWithFeaturesContext = React.createElement(
+Framer.LibraryFeaturesProvider, { children: content, value:
+{imgSizesWorkaroundEnabled: false} } ) const page =
+React.createElement(Framer.PageEffectsProvider, { children:
+contentWithFeaturesContext, value: {routes: {yd7nMFDHh: {}}} }) if
+(shouldHydrate) { performance.mark("framer-rewrite-breakpoints-start")
+Framer.removeHiddenBreakpointLayersV2(breakpoints)
+window.__framer_onRewriteBreakpoints?.(breakpoints)
+performance.mark("framer-rewrite-breakpoints-end")
+performance.measure("framer-rewrite-breakpoints",
+"framer-rewrite-breakpoints-start", "framer-rewrite-breakpoints-end")
+React.startTransition(() => { performance.mark("framer-hydration-start") if
+(improveInpDuringHydration) window.__FRAMER_TURN_OFF_REACT_EVENT_HANDLING__?.()
+ReactDOM.hydrateRoot(container, page) }) } else {
+ReactDOM.createRoot(container).render(page) } } catch (error) {
+track("published_site_load_error", { message: String(error), stack: error
+instanceof Error && typeof error.stack === "string" ? error.stack : null })
+throw error } }) callWhenDOMReady(async function () { const { default: Badge } =
+await import("__framer-badge") const ContainerWithStyleAppearEffect =
+Framer.withStyleAppearEffect(Framer.Container) React.startTransition(() => {
+ReactDOM.createRoot(document.getElementById("__framer-badge-container"))
+.render(React.createElement(ContainerWithStyleAppearEffect, { className:
+"__framer-badge", __framer__threshold: 0.5, __framer__animateOnce: true,
+__framer__opacity: 0, __framer__targetOpacity: 1, __framer__rotate: 0,
+__framer__x: 0, __framer__y: 10, __framer__scale: 1, __framer__transition: {
+"type": "spring", "ease": [0.44, 0, 0.56, 1], "duration": 0.3, "delay": 1,
+"stiffness": 350, "damping": 40, "mass": 1.5 }, __framer__rotateX: 0,
+__framer__rotateY: 0, __framer__perspective: 1200, },
+React.createElement(Badge))) }) })
