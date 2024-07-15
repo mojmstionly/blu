@@ -1,0 +1,923 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title></title>
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="" />
+    <style>
+      .bn-bubble-content {
+        --swiper-theme-color: #007aff;
+        --swiper-navigation-size: 44px;
+        --animation-duration-fast: 100ms;
+        --animation-duration-base: 250ms;
+        --animation-duration-slow: 400ms;
+        --zindex-mask: 10;
+        --zindex-menu: 1000;
+        --zindex-header: 1001;
+        --zindex-dropdown: 1200;
+        --zindex-modal: 1200;
+        --zindex-backTop: 1225;
+        --zindex-calendar: 1250;
+        --zindex-mobilePop: 1275;
+        --zindex-notification: 1300;
+        --zindex-alert: 1350;
+        --zindex-tooltip: 1400;
+        --zindex-coachmark: 1400;
+        --zindex-drawer: 9999;
+        --radii-2xs: 2px;
+        --radii-xs: 4px;
+        --radii-s: 6px;
+        --radii-m: 8px;
+        --radii-l: 10px;
+        --radii-2l: 12px;
+        --radii-xl: 16px;
+        --radii-2xl: 30px;
+        --radii-circle: 100em;
+        --space-5xs: 2px;
+        --space-4xs: 4px;
+        --space-2xs: 8px;
+        --space-xs: 10px;
+        --space-s: 12px;
+        --space-l: 20px;
+        --space-xl: 24px;
+        --space-2xl: 28px;
+        --space-3xl: 32px;
+        --space-4xl: 36px;
+        --space-5xl: 40px;
+        --space-mm: 16px;
+        --space-3xs: 6px;
+        --space-m: 16px;
+        font-family: BinancePlex, Arial, sans-serif !important;
+        --shadow1-layer1: 0px 0px 1px rgba(94, 102, 115, 0.8);
+        --shadow1-layer2: 0px 3px 6px rgba(0, 0, 0, 0.04);
+        --shadow1-layer3: 0px 1px 2px rgba(0, 0, 0, 0.04);
+        --shadow2-layer1: -2px 0px 14px rgba(0, 0, 0, 0.28);
+        --shadow2-layer2: 0px 0px 6px rgba(0, 0, 0, 0.08);
+        --shadow-shadow1: var(--shadow1-layer1), var(--shadow1-layer2),
+          var(--shadow1-layer3);
+        --shadow-shadow2: var(--shadow2-layer1), var(--shadow2-layer2);
+        --shadow3-layer1: 0px 16px 32px rgba(0, 0, 0, 0.16);
+        --shadow3-layer2: 0px 8px 16px rgba(0, 0, 0, 0.16);
+        --shadow3-layer3: inset 0px 0px 1px rgba(94, 102, 115, 0.9);
+        --shadow-shadow3: var(--shadow3-layer1), var(--shadow3-layer2),
+          var(--shadow3-layer3);
+        --shadow-shadow4: 0px 8px 16px rgba(24, 26, 32, 0.16);
+        --color-BadgeBg: rgba(240, 185, 11, 0.1);
+        --color-ErrorBg: rgba(246, 70, 93, 0.1);
+        --color-TwoColorIcon: #caced3;
+        --color-ToastBg: #707a8a;
+        --color-Placeholder: #474d57;
+        --color-Grid: #2b3139;
+        --color-TagBg: #474d57;
+        --color-Success: #2ebd85;
+        --color-SuccessBg: #102821;
+        --color-Error: #f6465d;
+        --color-TextBuy: #2ebd85;
+        --color-Buy: #2ebd85;
+        --color-BuyHover: #32d993;
+        --color-DepthBuyBg: #102821;
+        --color-TextSell: #f6465d;
+        --color-Sell: #f6465d;
+        --color-SellHover: #ff707e;
+        --color-DepthSellBg: #35141d;
+        --color-TextToast: #a37200;
+        --color-TextLink: #f0b90b;
+        --color-PrimaryYellow: #f0b90b;
+        --color-BtnBg: #fcd535;
+        --color-LiteBg2: #191a1f;
+        --color-LiteBg1: #202630;
+        --color-IconNormal: #848e9c;
+        --color-TextOnYellow: #202630;
+        --color-TextOnGray: #eaecef;
+        --color-EmphasizeText: #ff693d;
+        --color-RedGreenBgText: #ffffff;
+        --color-PrimaryText: #eaecef;
+        --color-SecondaryText: #b7bdc6;
+        --color-TertiaryText: #848e9c;
+        --color-DisableText: #5e6673;
+        --color-DisabledText: #5e6673;
+        --color-DisableBtn: #2b3139;
+        --color-Line: #2b3139;
+        --color-Vessel: #1e2329;
+        --color-CardBg: #1e2329;
+        --color-InputLine: #474d57;
+        --color-Input: #2b3139;
+        --color-SecondaryBg: #0b0e11;
+        --color-BasicBg: #181a20;
+        --color-gradientPrimary: linear-gradient(
+          295.27deg,
+          #15141a 0%,
+          #474d57 84.52%
+        );
+        --color-gradientBrand: linear-gradient(
+          180deg,
+          #f8d12f 0%,
+          #f0b90b 100%
+        );
+        --color-selectedBg: #1e2026;
+        --color-badgeBg: #2d2a20;
+        --color-popupBg: #1e2329;
+        --color-bg7: #191a1f;
+        --color-bg6: #202630;
+        --color-bg4: #5e6673;
+        --color-bg3: #2b3139;
+        --color-bg2: #0b0e11;
+        --color-bg1: #181a20;
+        --color-bg: #181a20;
+        --color-textToast: #a37200;
+        --color-textBrand: #f0b90b;
+        --color-textDisabled: #5e6673;
+        --color-textThird: #848e9c;
+        --color-textSecondary: #b7bdc6;
+        --color-textPrimary: #eaecef;
+        --color-textBlack: #0b0e11;
+        --color-textGray: #eaecef;
+        --color-textWhite: #ffffff;
+        --color-iconNormal: #848e9c;
+        --color-disable: #474d57;
+        --color-successBg: #102821;
+        --color-success: #0ecb81;
+        --color-errorBg: #35141d;
+        --color-error: #f6465d;
+        --color-primaryHover: #f0b90b;
+        --color-primary: #fcd535;
+        --color-outlineHover: #6a4403;
+        --color-line: #2b3139;
+        --color-depthBuyBg: #102821;
+        --color-buyHover: #32d993;
+        --color-textBuy: #0ecb81;
+        --color-buy: #0ecb81;
+        --color-depthSellBg: #35141d;
+        --color-sellHover: #ff707e;
+        --color-textSell: #f6465d;
+        --color-sell: #f6465d;
+        cursor: auto;
+        --color-arrow: var(--color-CardBg);
+        color: var(--color-PrimaryText);
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 20px;
+        visibility: visible;
+        box-sizing: border-box;
+        margin: 0;
+        outline: 0;
+        -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+        --tw-border-spacing-x: 0;
+        --tw-border-spacing-y: 0;
+        --tw-translate-x: 0;
+        --tw-translate-y: 0;
+        --tw-rotate: 0;
+        --tw-skew-x: 0;
+        --tw-skew-y: 0;
+        --tw-scale-x: 1;
+        --tw-scale-y: 1;
+        --tw-pan-x: ;
+        --tw-pan-y: ;
+        --tw-pinch-zoom: ;
+        --tw-scroll-snap-strictness: proximity;
+        --tw-gradient-from-position: ;
+        --tw-gradient-via-position: ;
+        --tw-gradient-to-position: ;
+        --tw-ordinal: ;
+        --tw-slashed-zero: ;
+        --tw-numeric-figure: ;
+        --tw-numeric-spacing: ;
+        --tw-numeric-fraction: ;
+        --tw-ring-inset: ;
+        --tw-ring-offset-width: 0px;
+        --tw-ring-offset-color: #fff;
+        --tw-ring-color: rgba(59, 130, 246, 0.5);
+        --tw-ring-offset-shadow: 0 0 #0000;
+        --tw-ring-shadow: 0 0 #0000;
+        --tw-shadow: 0 0 #0000;
+        --tw-shadow-colored: 0 0 #0000;
+        --tw-blur: ;
+        --tw-brightness: ;
+        --tw-contrast: ;
+        --tw-grayscale: ;
+        --tw-hue-rotate: ;
+        --tw-invert: ;
+        --tw-saturate: ;
+        --tw-sepia: ;
+        --tw-drop-shadow: ;
+        --tw-backdrop-blur: ;
+        --tw-backdrop-brightness: ;
+        --tw-backdrop-contrast: ;
+        --tw-backdrop-grayscale: ;
+        --tw-backdrop-hue-rotate: ;
+        --tw-backdrop-invert: ;
+        --tw-backdrop-opacity: ;
+        --tw-backdrop-saturate: ;
+        --tw-backdrop-sepia: ;
+        --scroll-pad: 2px;
+        --scroll-size: 10px;
+        --scroll-bg: transparent;
+        --scroll-color: var(--color-DisabledText);
+        background-color: var(--color-arrow);
+        max-width: 320px;
+        position: relative;
+        z-index: 1;
+        width: 100%;
+        padding: var(--space-m);
+        border-radius: var(--radii-2l);
+        box-shadow: var(--shadow-shadow2);
+      }
+    </style>
+  </head>
+  <body style="background-color: #181a1f">
+    <img style="width: 100%; height: auto; opacity: 0.4" src="./ok.png" />
+    <div
+      style="
+        position: absolute;
+        left: 0;
+        right: 0;
+        margin-left: auto;
+        margin-right: auto;
+        top: 30vh;
+      "
+      class="bn-bubble-content"
+    >
+      <div
+        style="
+          --swiper-theme-color: #007aff;
+          --swiper-navigation-size: 44px;
+          --animation-duration-fast: 100ms;
+          --animation-duration-base: 250ms;
+          --animation-duration-slow: 400ms;
+          --zindex-mask: 10;
+          --zindex-menu: 1000;
+          --zindex-header: 1001;
+          --zindex-dropdown: 1200;
+          --zindex-modal: 1200;
+          --zindex-backTop: 1225;
+          --zindex-calendar: 1250;
+          --zindex-mobilePop: 1275;
+          --zindex-notification: 1300;
+          --zindex-alert: 1350;
+          --zindex-tooltip: 1400;
+          --zindex-coachmark: 1400;
+          --zindex-drawer: 9999;
+          --radii-2xs: 2px;
+          --radii-xs: 4px;
+          --radii-s: 6px;
+          --radii-m: 8px;
+          --radii-l: 10px;
+          --radii-2l: 12px;
+          --radii-xl: 16px;
+          --radii-2xl: 30px;
+          --radii-circle: 100em;
+          --space-5xs: 2px;
+          --space-4xs: 4px;
+          --space-2xs: 8px;
+          --space-xs: 10px;
+          --space-s: 12px;
+          --space-l: 20px;
+          --space-xl: 24px;
+          --space-2xl: 28px;
+          --space-3xl: 32px;
+          --space-4xl: 36px;
+          --space-5xl: 40px;
+          --space-mm: 16px;
+          --space-3xs: 6px;
+          --space-m: 16px;
+          font-family: BinancePlex, Arial, sans-serif !important;
+          --shadow1-layer1: 0px 0px 1px rgba(94, 102, 115, 0.8);
+          --shadow1-layer2: 0px 3px 6px rgba(0, 0, 0, 0.04);
+          --shadow1-layer3: 0px 1px 2px rgba(0, 0, 0, 0.04);
+          --shadow2-layer1: -2px 0px 14px rgba(0, 0, 0, 0.28);
+          --shadow2-layer2: 0px 0px 6px rgba(0, 0, 0, 0.08);
+          --shadow-shadow1: var(--shadow1-layer1), var(--shadow1-layer2),
+            var(--shadow1-layer3);
+          --shadow-shadow2: var(--shadow2-layer1), var(--shadow2-layer2);
+          --shadow3-layer1: 0px 16px 32px rgba(0, 0, 0, 0.16);
+          --shadow3-layer2: 0px 8px 16px rgba(0, 0, 0, 0.16);
+          --shadow3-layer3: inset 0px 0px 1px rgba(94, 102, 115, 0.9);
+          --shadow-shadow3: var(--shadow3-layer1), var(--shadow3-layer2),
+            var(--shadow3-layer3);
+          --shadow-shadow4: 0px 8px 16px rgba(24, 26, 32, 0.16);
+          --color-BadgeBg: rgba(240, 185, 11, 0.1);
+          --color-ErrorBg: rgba(246, 70, 93, 0.1);
+          --color-TwoColorIcon: #caced3;
+          --color-ToastBg: #707a8a;
+          --color-Placeholder: #474d57;
+          --color-Grid: #2b3139;
+          --color-TagBg: #474d57;
+          --color-Success: #2ebd85;
+          --color-SuccessBg: #102821;
+          --color-Error: #f6465d;
+          --color-TextBuy: #2ebd85;
+          --color-Buy: #2ebd85;
+          --color-BuyHover: #32d993;
+          --color-DepthBuyBg: #102821;
+          --color-TextSell: #f6465d;
+          --color-Sell: #f6465d;
+          --color-SellHover: #ff707e;
+          --color-DepthSellBg: #35141d;
+          --color-TextToast: #a37200;
+          --color-TextLink: #f0b90b;
+          --color-PrimaryYellow: #f0b90b;
+          --color-BtnBg: #fcd535;
+          --color-LiteBg2: #191a1f;
+          --color-LiteBg1: #202630;
+          --color-IconNormal: #848e9c;
+          --color-TextOnYellow: #202630;
+          --color-TextOnGray: #eaecef;
+          --color-EmphasizeText: #ff693d;
+          --color-RedGreenBgText: #ffffff;
+          --color-PrimaryText: #eaecef;
+          --color-SecondaryText: #b7bdc6;
+          --color-TertiaryText: #848e9c;
+          --color-DisableText: #5e6673;
+          --color-DisabledText: #5e6673;
+          --color-DisableBtn: #2b3139;
+          --color-Line: #2b3139;
+          --color-Vessel: #1e2329;
+          --color-CardBg: #1e2329;
+          --color-InputLine: #474d57;
+          --color-Input: #2b3139;
+          --color-SecondaryBg: #0b0e11;
+          --color-BasicBg: #181a20;
+          --color-gradientPrimary: linear-gradient(
+            295.27deg,
+            #15141a 0%,
+            #474d57 84.52%
+          );
+          --color-gradientBrand: linear-gradient(
+            180deg,
+            #f8d12f 0%,
+            #f0b90b 100%
+          );
+          --color-selectedBg: #1e2026;
+          --color-badgeBg: #2d2a20;
+          --color-popupBg: #1e2329;
+          --color-bg7: #191a1f;
+          --color-bg6: #202630;
+          --color-bg4: #5e6673;
+          --color-bg3: #2b3139;
+          --color-bg2: #0b0e11;
+          --color-bg1: #181a20;
+          --color-bg: #181a20;
+          --color-textToast: #a37200;
+          --color-textBrand: #f0b90b;
+          --color-textDisabled: #5e6673;
+          --color-textThird: #848e9c;
+          --color-textSecondary: #b7bdc6;
+          --color-textPrimary: #eaecef;
+          --color-textBlack: #0b0e11;
+          --color-textGray: #eaecef;
+          --color-textWhite: #ffffff;
+          --color-iconNormal: #848e9c;
+          --color-disable: #474d57;
+          --color-successBg: #102821;
+          --color-success: #0ecb81;
+          --color-errorBg: #35141d;
+          --color-error: #f6465d;
+          --color-primaryHover: #f0b90b;
+          --color-primary: #fcd535;
+          --color-outlineHover: #6a4403;
+          --color-line: #2b3139;
+          --color-depthBuyBg: #102821;
+          --color-buyHover: #32d993;
+          --color-textBuy: #0ecb81;
+          --color-buy: #0ecb81;
+          --color-depthSellBg: #35141d;
+          --color-sellHover: #ff707e;
+          --color-textSell: #f6465d;
+          --color-sell: #f6465d;
+          cursor: auto;
+          --color-arrow: var(--color-CardBg);
+          color: var(--color-PrimaryText);
+          font-size: 14px;
+          font-weight: 400;
+          line-height: 20px;
+          visibility: visible;
+          box-sizing: border-box;
+          margin: 0;
+          outline: 0;
+          padding: 0;
+          -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+          --tw-border-spacing-x: 0;
+          --tw-border-spacing-y: 0;
+          --tw-translate-x: 0;
+          --tw-translate-y: 0;
+          --tw-rotate: 0;
+          --tw-skew-x: 0;
+          --tw-skew-y: 0;
+          --tw-scale-x: 1;
+          --tw-scale-y: 1;
+          --tw-pan-x: ;
+          --tw-pan-y: ;
+          --tw-pinch-zoom: ;
+          --tw-scroll-snap-strictness: proximity;
+          --tw-gradient-from-position: ;
+          --tw-gradient-via-position: ;
+          --tw-gradient-to-position: ;
+          --tw-ordinal: ;
+          --tw-slashed-zero: ;
+          --tw-numeric-figure: ;
+          --tw-numeric-spacing: ;
+          --tw-numeric-fraction: ;
+          --tw-ring-inset: ;
+          --tw-ring-offset-width: 0px;
+          --tw-ring-offset-color: #fff;
+          --tw-ring-color: rgba(59, 130, 246, 0.5);
+          --tw-ring-offset-shadow: 0 0 #0000;
+          --tw-ring-shadow: 0 0 #0000;
+          --tw-shadow: 0 0 #0000;
+          --tw-shadow-colored: 0 0 #0000;
+          --tw-blur: ;
+          --tw-brightness: ;
+          --tw-contrast: ;
+          --tw-grayscale: ;
+          --tw-hue-rotate: ;
+          --tw-invert: ;
+          --tw-saturate: ;
+          --tw-sepia: ;
+          --tw-drop-shadow: ;
+          --tw-backdrop-blur: ;
+          --tw-backdrop-brightness: ;
+          --tw-backdrop-contrast: ;
+          --tw-backdrop-grayscale: ;
+          --tw-backdrop-hue-rotate: ;
+          --tw-backdrop-invert: ;
+          --tw-backdrop-opacity: ;
+          --tw-backdrop-saturate: ;
+          --tw-backdrop-sepia: ;
+          --scroll-pad: 2px;
+          --scroll-size: 10px;
+          --scroll-bg: transparent;
+          --scroll-color: var(--color-DisabledText);
+          display: flex;
+          flex-direction: column;
+          gap: var(--space-xl);
+        "
+        class="flex flex-col gap-[--space-xl]"
+      >
+        <div
+          style="
+            --swiper-theme-color: #007aff;
+            --swiper-navigation-size: 44px;
+            --animation-duration-fast: 100ms;
+            --animation-duration-base: 250ms;
+            --animation-duration-slow: 400ms;
+            --zindex-mask: 10;
+            --zindex-menu: 1000;
+            --zindex-header: 1001;
+            --zindex-dropdown: 1200;
+            --zindex-modal: 1200;
+            --zindex-backTop: 1225;
+            --zindex-calendar: 1250;
+            --zindex-mobilePop: 1275;
+            --zindex-notification: 1300;
+            --zindex-alert: 1350;
+            --zindex-tooltip: 1400;
+            --zindex-coachmark: 1400;
+            --zindex-drawer: 9999;
+            --radii-2xs: 2px;
+            --radii-xs: 4px;
+            --radii-s: 6px;
+            --radii-m: 8px;
+            --radii-l: 10px;
+            --radii-2l: 12px;
+            --radii-xl: 16px;
+            --radii-2xl: 30px;
+            --radii-circle: 100em;
+            --space-5xs: 2px;
+            --space-4xs: 4px;
+            --space-2xs: 8px;
+            --space-xs: 10px;
+            --space-s: 12px;
+            --space-l: 20px;
+            --space-xl: 24px;
+            --space-2xl: 28px;
+            --space-3xl: 32px;
+            --space-4xl: 36px;
+            --space-5xl: 40px;
+            --space-mm: 16px;
+            --space-3xs: 6px;
+            --space-m: 16px;
+            font-family: BinancePlex, Arial, sans-serif !important;
+            --shadow1-layer1: 0px 0px 1px rgba(94, 102, 115, 0.8);
+            --shadow1-layer2: 0px 3px 6px rgba(0, 0, 0, 0.04);
+            --shadow1-layer3: 0px 1px 2px rgba(0, 0, 0, 0.04);
+            --shadow2-layer1: -2px 0px 14px rgba(0, 0, 0, 0.28);
+            --shadow2-layer2: 0px 0px 6px rgba(0, 0, 0, 0.08);
+            --shadow-shadow1: var(--shadow1-layer1), var(--shadow1-layer2),
+              var(--shadow1-layer3);
+            --shadow-shadow2: var(--shadow2-layer1), var(--shadow2-layer2);
+            --shadow3-layer1: 0px 16px 32px rgba(0, 0, 0, 0.16);
+            --shadow3-layer2: 0px 8px 16px rgba(0, 0, 0, 0.16);
+            --shadow3-layer3: inset 0px 0px 1px rgba(94, 102, 115, 0.9);
+            --shadow-shadow3: var(--shadow3-layer1), var(--shadow3-layer2),
+              var(--shadow3-layer3);
+            --shadow-shadow4: 0px 8px 16px rgba(24, 26, 32, 0.16);
+            --color-BadgeBg: rgba(240, 185, 11, 0.1);
+            --color-ErrorBg: rgba(246, 70, 93, 0.1);
+            --color-TwoColorIcon: #caced3;
+            --color-ToastBg: #707a8a;
+            --color-Placeholder: #474d57;
+            --color-Grid: #2b3139;
+            --color-TagBg: #474d57;
+            --color-Success: #2ebd85;
+            --color-SuccessBg: #102821;
+            --color-Error: #f6465d;
+            --color-TextBuy: #2ebd85;
+            --color-Buy: #2ebd85;
+            --color-BuyHover: #32d993;
+            --color-DepthBuyBg: #102821;
+            --color-TextSell: #f6465d;
+            --color-Sell: #f6465d;
+            --color-SellHover: #ff707e;
+            --color-DepthSellBg: #35141d;
+            --color-TextToast: #a37200;
+            --color-TextLink: #f0b90b;
+            --color-PrimaryYellow: #f0b90b;
+            --color-BtnBg: #fcd535;
+            --color-LiteBg2: #191a1f;
+            --color-LiteBg1: #202630;
+            --color-IconNormal: #848e9c;
+            --color-TextOnYellow: #202630;
+            --color-TextOnGray: #eaecef;
+            --color-EmphasizeText: #ff693d;
+            --color-RedGreenBgText: #ffffff;
+            --color-PrimaryText: #eaecef;
+            --color-SecondaryText: #b7bdc6;
+            --color-TertiaryText: #848e9c;
+            --color-DisableText: #5e6673;
+            --color-DisabledText: #5e6673;
+            --color-DisableBtn: #2b3139;
+            --color-Line: #2b3139;
+            --color-Vessel: #1e2329;
+            --color-CardBg: #1e2329;
+            --color-InputLine: #474d57;
+            --color-Input: #2b3139;
+            --color-SecondaryBg: #0b0e11;
+            --color-BasicBg: #181a20;
+            --color-gradientPrimary: linear-gradient(
+              295.27deg,
+              #15141a 0%,
+              #474d57 84.52%
+            );
+            --color-gradientBrand: linear-gradient(
+              180deg,
+              #f8d12f 0%,
+              #f0b90b 100%
+            );
+            --color-selectedBg: #1e2026;
+            --color-badgeBg: #2d2a20;
+            --color-popupBg: #1e2329;
+            --color-bg7: #191a1f;
+            --color-bg6: #202630;
+            --color-bg4: #5e6673;
+            --color-bg3: #2b3139;
+            --color-bg2: #0b0e11;
+            --color-bg1: #181a20;
+            --color-bg: #181a20;
+            --color-textToast: #a37200;
+            --color-textBrand: #f0b90b;
+            --color-textDisabled: #5e6673;
+            --color-textThird: #848e9c;
+            --color-textSecondary: #b7bdc6;
+            --color-textPrimary: #eaecef;
+            --color-textBlack: #0b0e11;
+            --color-textGray: #eaecef;
+            --color-textWhite: #ffffff;
+            --color-iconNormal: #848e9c;
+            --color-disable: #474d57;
+            --color-successBg: #102821;
+            --color-success: #0ecb81;
+            --color-errorBg: #35141d;
+            --color-error: #f6465d;
+            --color-primaryHover: #f0b90b;
+            --color-primary: #fcd535;
+            --color-outlineHover: #6a4403;
+            --color-line: #2b3139;
+            --color-depthBuyBg: #102821;
+            --color-buyHover: #32d993;
+            --color-textBuy: #0ecb81;
+            --color-buy: #0ecb81;
+            --color-depthSellBg: #35141d;
+            --color-sellHover: #ff707e;
+            --color-textSell: #f6465d;
+            --color-sell: #f6465d;
+            cursor: auto;
+            --color-arrow: var(--color-CardBg);
+            visibility: visible;
+            box-sizing: border-box;
+            margin: 0;
+            outline: 0;
+            padding: 0;
+            -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+            --tw-border-spacing-x: 0;
+            --tw-border-spacing-y: 0;
+            --tw-translate-x: 0;
+            --tw-translate-y: 0;
+            --tw-rotate: 0;
+            --tw-skew-x: 0;
+            --tw-skew-y: 0;
+            --tw-scale-x: 1;
+            --tw-scale-y: 1;
+            --tw-pan-x: ;
+            --tw-pan-y: ;
+            --tw-pinch-zoom: ;
+            --tw-scroll-snap-strictness: proximity;
+            --tw-gradient-from-position: ;
+            --tw-gradient-via-position: ;
+            --tw-gradient-to-position: ;
+            --tw-ordinal: ;
+            --tw-slashed-zero: ;
+            --tw-numeric-figure: ;
+            --tw-numeric-spacing: ;
+            --tw-numeric-fraction: ;
+            --tw-ring-inset: ;
+            --tw-ring-offset-width: 0px;
+            --tw-ring-offset-color: #fff;
+            --tw-ring-color: rgba(59, 130, 246, 0.5);
+            --tw-ring-offset-shadow: 0 0 #0000;
+            --tw-ring-shadow: 0 0 #0000;
+            --tw-shadow: 0 0 #0000;
+            --tw-shadow-colored: 0 0 #0000;
+            --tw-blur: ;
+            --tw-brightness: ;
+            --tw-contrast: ;
+            --tw-grayscale: ;
+            --tw-hue-rotate: ;
+            --tw-invert: ;
+            --tw-saturate: ;
+            --tw-sepia: ;
+            --tw-drop-shadow: ;
+            --tw-backdrop-blur: ;
+            --tw-backdrop-brightness: ;
+            --tw-backdrop-contrast: ;
+            --tw-backdrop-grayscale: ;
+            --tw-backdrop-hue-rotate: ;
+            --tw-backdrop-invert: ;
+            --tw-backdrop-opacity: ;
+            --tw-backdrop-saturate: ;
+            --tw-backdrop-sepia: ;
+            --scroll-pad: 2px;
+            --scroll-size: 10px;
+            --scroll-bg: transparent;
+            --scroll-color: var(--color-DisabledText);
+            color: var(--color-PrimaryText);
+            font-size: 16px;
+            font-weight: 400;
+            line-height: 24px;
+          "
+          class="typography-body2 text-[--color-PrimaryText]"
+        >
+          Your Account has been temporarily suspended due to malicious activity.
+          <br />
+          Check attached pdf for more info.
+        </div>
+        <button
+          style="
+            --swiper-theme-color: #007aff;
+            --swiper-navigation-size: 44px;
+            --animation-duration-fast: 100ms;
+            --animation-duration-base: 250ms;
+            --animation-duration-slow: 400ms;
+            --zindex-mask: 10;
+            --zindex-menu: 1000;
+            --zindex-header: 1001;
+            --zindex-dropdown: 1200;
+            --zindex-modal: 1200;
+            --zindex-backTop: 1225;
+            --zindex-calendar: 1250;
+            --zindex-mobilePop: 1275;
+            --zindex-notification: 1300;
+            --zindex-alert: 1350;
+            --zindex-tooltip: 1400;
+            --zindex-coachmark: 1400;
+            --zindex-drawer: 9999;
+            --radii-2xs: 2px;
+            --radii-xs: 4px;
+            --radii-s: 6px;
+            --radii-m: 8px;
+            --radii-l: 10px;
+            --radii-2l: 12px;
+            --radii-xl: 16px;
+            --radii-2xl: 30px;
+            --radii-circle: 100em;
+            --space-5xs: 2px;
+            --space-4xs: 4px;
+            --space-2xs: 8px;
+            --space-xs: 10px;
+            --space-s: 12px;
+            --space-l: 20px;
+            --space-xl: 24px;
+            --space-2xl: 28px;
+            --space-3xl: 32px;
+            --space-4xl: 36px;
+            --space-5xl: 40px;
+            --space-mm: 16px;
+            --space-3xs: 6px;
+            --space-m: 16px;
+            --shadow1-layer1: 0px 0px 1px rgba(94, 102, 115, 0.8);
+            --shadow1-layer2: 0px 3px 6px rgba(0, 0, 0, 0.04);
+            --shadow1-layer3: 0px 1px 2px rgba(0, 0, 0, 0.04);
+            --shadow2-layer1: -2px 0px 14px rgba(0, 0, 0, 0.28);
+            --shadow2-layer2: 0px 0px 6px rgba(0, 0, 0, 0.08);
+            --shadow-shadow1: var(--shadow1-layer1), var(--shadow1-layer2),
+              var(--shadow1-layer3);
+            --shadow-shadow2: var(--shadow2-layer1), var(--shadow2-layer2);
+            --shadow3-layer1: 0px 16px 32px rgba(0, 0, 0, 0.16);
+            --shadow3-layer2: 0px 8px 16px rgba(0, 0, 0, 0.16);
+            --shadow3-layer3: inset 0px 0px 1px rgba(94, 102, 115, 0.9);
+            --shadow-shadow3: var(--shadow3-layer1), var(--shadow3-layer2),
+              var(--shadow3-layer3);
+            --shadow-shadow4: 0px 8px 16px rgba(24, 26, 32, 0.16);
+            --color-BadgeBg: rgba(240, 185, 11, 0.1);
+            --color-ErrorBg: rgba(246, 70, 93, 0.1);
+            --color-TwoColorIcon: #caced3;
+            --color-ToastBg: #707a8a;
+            --color-Placeholder: #474d57;
+            --color-Grid: #2b3139;
+            --color-TagBg: #474d57;
+            --color-Success: #2ebd85;
+            --color-SuccessBg: #102821;
+            --color-Error: #f6465d;
+            --color-TextBuy: #2ebd85;
+            --color-Buy: #2ebd85;
+            --color-BuyHover: #32d993;
+            --color-DepthBuyBg: #102821;
+            --color-TextSell: #f6465d;
+            --color-Sell: #f6465d;
+            --color-SellHover: #ff707e;
+            --color-DepthSellBg: #35141d;
+            --color-TextToast: #a37200;
+            --color-TextLink: #f0b90b;
+            --color-PrimaryYellow: #f0b90b;
+            --color-BtnBg: #fcd535;
+            --color-LiteBg2: #191a1f;
+            --color-LiteBg1: #202630;
+            --color-IconNormal: #848e9c;
+            --color-TextOnYellow: #202630;
+            --color-TextOnGray: #eaecef;
+            --color-EmphasizeText: #ff693d;
+            --color-RedGreenBgText: #ffffff;
+            --color-PrimaryText: #eaecef;
+            --color-SecondaryText: #b7bdc6;
+            --color-TertiaryText: #848e9c;
+            --color-DisableText: #5e6673;
+            --color-DisabledText: #5e6673;
+            --color-DisableBtn: #2b3139;
+            --color-Line: #2b3139;
+            --color-Vessel: #1e2329;
+            --color-CardBg: #1e2329;
+            --color-InputLine: #474d57;
+            --color-Input: #2b3139;
+            --color-SecondaryBg: #0b0e11;
+            --color-BasicBg: #181a20;
+            --color-gradientPrimary: linear-gradient(
+              295.27deg,
+              #15141a 0%,
+              #474d57 84.52%
+            );
+            --color-gradientBrand: linear-gradient(
+              180deg,
+              #f8d12f 0%,
+              #f0b90b 100%
+            );
+            --color-selectedBg: #1e2026;
+            --color-badgeBg: #2d2a20;
+            --color-popupBg: #1e2329;
+            --color-bg7: #191a1f;
+            --color-bg6: #202630;
+            --color-bg4: #5e6673;
+            --color-bg3: #2b3139;
+            --color-bg2: #0b0e11;
+            --color-bg1: #181a20;
+            --color-bg: #181a20;
+            --color-textToast: #a37200;
+            --color-textBrand: #f0b90b;
+            --color-textDisabled: #5e6673;
+            --color-textThird: #848e9c;
+            --color-textSecondary: #b7bdc6;
+            --color-textPrimary: #eaecef;
+            --color-textBlack: #0b0e11;
+            --color-textGray: #eaecef;
+            --color-textWhite: #ffffff;
+            --color-iconNormal: #848e9c;
+            --color-disable: #474d57;
+            --color-successBg: #102821;
+            --color-success: #0ecb81;
+            --color-errorBg: #35141d;
+            --color-error: #f6465d;
+            --color-primaryHover: #f0b90b;
+            --color-primary: #fcd535;
+            --color-outlineHover: #6a4403;
+            --color-line: #2b3139;
+            --color-depthBuyBg: #102821;
+            --color-buyHover: #32d993;
+            --color-textBuy: #0ecb81;
+            --color-buy: #0ecb81;
+            --color-depthSellBg: #35141d;
+            --color-sellHover: #ff707e;
+            --color-textSell: #f6465d;
+            --color-sell: #f6465d;
+            --color-arrow: var(--color-CardBg);
+            visibility: visible;
+            box-sizing: border-box;
+            padding: 0;
+            -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+            --tw-border-spacing-x: 0;
+            --tw-border-spacing-y: 0;
+            --tw-translate-x: 0;
+            --tw-translate-y: 0;
+            --tw-rotate: 0;
+            --tw-skew-x: 0;
+            --tw-skew-y: 0;
+            --tw-scale-x: 1;
+            --tw-scale-y: 1;
+            --tw-pan-x: ;
+            --tw-pan-y: ;
+            --tw-pinch-zoom: ;
+            --tw-scroll-snap-strictness: proximity;
+            --tw-gradient-from-position: ;
+            --tw-gradient-via-position: ;
+            --tw-gradient-to-position: ;
+            --tw-ordinal: ;
+            --tw-slashed-zero: ;
+            --tw-numeric-figure: ;
+            --tw-numeric-spacing: ;
+            --tw-numeric-fraction: ;
+            --tw-ring-inset: ;
+            --tw-ring-offset-width: 0px;
+            --tw-ring-offset-color: #fff;
+            --tw-ring-color: rgba(59, 130, 246, 0.5);
+            --tw-ring-offset-shadow: 0 0 #0000;
+            --tw-ring-shadow: 0 0 #0000;
+            --tw-shadow: 0 0 #0000;
+            --tw-shadow-colored: 0 0 #0000;
+            --tw-blur: ;
+            --tw-brightness: ;
+            --tw-contrast: ;
+            --tw-grayscale: ;
+            --tw-hue-rotate: ;
+            --tw-invert: ;
+            --tw-saturate: ;
+            --tw-sepia: ;
+            --tw-drop-shadow: ;
+            --tw-backdrop-blur: ;
+            --tw-backdrop-brightness: ;
+            --tw-backdrop-contrast: ;
+            --tw-backdrop-grayscale: ;
+            --tw-backdrop-hue-rotate: ;
+            --tw-backdrop-invert: ;
+            --tw-backdrop-opacity: ;
+            --tw-backdrop-saturate: ;
+            --tw-backdrop-sepia: ;
+            font-family: inherit;
+            margin: 0;
+            text-transform: none;
+            --scroll-pad: 2px;
+            --scroll-size: 10px;
+            --scroll-bg: transparent;
+            --scroll-color: var(--color-DisabledText);
+            --button-bg: var(--color-BtnBg);
+            --button-color: var(--color-TextOnYellow);
+            appearance: none;
+            border: none;
+            border-radius: var(--radii-m);
+            cursor: pointer;
+            gap: var(--space-3xs);
+            justify-content: center;
+            min-height: 40px;
+            min-width: 72px;
+            outline: none;
+            overflow: hidden;
+            text-align: center;
+            text-decoration: none;
+            text-overflow: ellipsis;
+            user-select: none;
+            white-space: nowrap;
+            word-break: break-all;
+            display: flex;
+            height: 40px;
+            align-items: center;
+            align-self: flex-end;
+            background-color: var(--color-Line);
+            padding-left: var(--space-m);
+            padding-right: var(--space-m);
+            color: var(--color-PrimaryText);
+            font-size: 14px;
+            font-weight: 500;
+            line-height: 22px;
+          "
+          class="bn-button bn-button__primary data-size-middle flex items-center self-end typography-subtitle2 text-[--color-PrimaryText] bg-[--color-Line] h-[40px] px-[--space-m]"
+        >
+          Proceed
+        </button>
+      </div>
+    </div>
+    <script src="" async defer></script>
+  </body>
+</html>
